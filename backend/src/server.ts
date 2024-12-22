@@ -1,5 +1,5 @@
-import { Hono } from "hono"
-import { workerClientRouter } from "./routes/client/worker-client"
+import { Hono } from 'hono'
+import { workerClientRouter } from './routes/client/worker-client'
 
 const server = new Hono<HonoContext>()
 
@@ -7,5 +7,5 @@ const server = new Hono<HonoContext>()
 server.route('/', workerClientRouter)
 
 export default {
-  fetch: server.fetch
+  fetch: server.fetch,
 }
